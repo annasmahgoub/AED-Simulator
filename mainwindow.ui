@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1029</width>
+    <height>786</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="systemDisplay">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-30</y>
+      <width>1031</width>
+      <height>771</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QGroupBox {
+    background-color: rgb(224, 255, 233);
+    color: black;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin; /* This property is used to align the title within the margin area */
+    subcontrol-position: top center; /* This aligns the title to the top center */
+    padding: 0px 0px; /* Adjust the padding as needed */
+}
+</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <widget class="QPushButton" name="statusLight4">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>500</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 15px;
+    border: 1px solid #000;
+    background-color: white;
+}
+
+QPushButton[status=&quot;yellow&quot;] {
+    background-color: yellow;
+}
+
+QPushButton[status=&quot;red&quot;] {
+    background-color: red;
+}
+
+QPushButton[status=&quot;white&quot;] {
+    background-color: white;
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>42</width>
+       <height>42</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="shockButton">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>540</y>
+       <width>151</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 0, 0, 0.8);
+border: none;
+color: black;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+font-weight: bold;
+border: 1px solid black;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+border-radius: 12px;
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="images.qrc">
+       <normaloff>:/public/shockButton.jpeg</normaloff>:/public/shockButton.jpeg</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>100</width>
+       <height>100</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="statusDisplay">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>330</y>
+       <width>401</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">display: flex;
+text-align: center;
+justify-content: center;
+align-contnet: center;</string>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:64pt; font-weight:700; color:#ff2600;&quot;&gt;OFF&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="onButton">
+     <property name="geometry">
+      <rect>
+       <x>920</x>
+       <y>40</y>
+       <width>71</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#onButton {
+    border-radius: 15px;
+    border: 1px solid #000;
+    background-color: white;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+QPushButton#onButton[pressed=&quot;true&quot;] {
+    border: 2px solid yellow;
+}
+
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="images.qrc">
+       <normaloff>:/public/power.png</normaloff>:/public/power.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>42</width>
+       <height>42</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="statusLight3">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>500</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 15px;
+    border: 1px solid #000;
+    background-color: white;
+}
+
+QPushButton[status=&quot;yellow&quot;] {
+    background-color: yellow;
+}
+
+QPushButton[status=&quot;red&quot;] {
+    background-color: red;
+}
+
+QPushButton[status=&quot;white&quot;] {
+    background-color: white;
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>42</width>
+       <height>42</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="statusLight1">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>500</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 15px;
+    border: 1px solid #000;
+    background-color: white;
+}
+
+QPushButton[status=&quot;yellow&quot;] {
+    background-color: yellow;
+}
+
+QPushButton[status=&quot;red&quot;] {
+    background-color: red;
+}
+
+QPushButton[status=&quot;white&quot;] {
+    background-color: white;
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>42</width>
+       <height>42</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="statusLight2">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>500</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 15px;
+    border: 1px solid #000;
+    background-color: white;
+}
+
+QPushButton[status=&quot;yellow&quot;] {
+    background-color: yellow;
+}
+
+QPushButton[status=&quot;red&quot;] {
+    background-color: red;
+}
+
+QPushButton[status=&quot;white&quot;] {
+    background-color: white;
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>42</width>
+       <height>42</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="checkMark">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>81</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 10px;
+    background-color: white;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid transparent;
+}
+
+QPushButton[on=&quot;true&quot;] {
+    border: 4px solid green; 
+}
+
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="images.qrc">
+       <normaloff>:/public/check.jpeg</normaloff>:/public/check.jpeg</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>60</width>
+       <height>60</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="xMark">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>40</y>
+       <width>81</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 10px;
+    background-color: white;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid transparent;
+}
+
+QPushButton[on=&quot;true&quot;] {
+    border: 4px solid red; 
+}
+
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="images.qrc">
+       <normaloff>:/public/xmarkTran.png</normaloff>:/public/xmarkTran.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>60</width>
+       <height>60</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="elevatorNumber_2">
+     <property name="geometry">
+      <rect>
+       <x>-60</x>
+       <y>640</y>
+       <width>221</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">display: flex;
+text-align: center;
+justify-content: center;
+align-contnet: center;
+background-color: transparent;</string>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:48pt; font-weight:700; color:#009cfa;&quot;&gt;AED&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="heartBeatDisplay">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>40</y>
+       <width>641</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">display: flex;
+text-align: center;
+justify-content: center;
+align-contnet: center;</string>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="systemDisplay_2">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>700</y>
+       <width>531</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QGroupBox {
+    background-color: #A9A9A9;
+    color: black;
+}
+
+QGroupBox::title {
+    background-color: #A9A9A9;
+    subcontrol-origin: margin; /* This property is used to align the title within the margin area */
+    subcontrol-position: top center; /* This aligns the title to the top center */
+    padding: 0px 0px; /* Adjust the padding as needed */
+}
+</string>
+     </property>
+     <property name="title">
+      <string>TEST CASES</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+     <widget class="QPushButton" name="normalButton">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+  background-color: rgb(199, 199, 199);
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 1px solid black;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 12px;
+}
+
+QPushButton[on=&quot;true&quot;] {
+  border: 4px solid yellow;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>NORMAL</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="nonShockableButton">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>30</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+  background-color: rgb(199, 199, 199);
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 1px solid black;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 12px;
+}
+
+QPushButton[on=&quot;true&quot;] {
+  border: 4px solid yellow;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>NON SHOCKABLE</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="weekCompressionButton">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>30</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+  background-color: rgb(199, 199, 199);
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 1px solid black;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 12px;
+}
+
+QPushButton[on=&quot;true&quot;] {
+  border: 4px solid yellow;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>WEAK COMPRESSIONS</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="batteryButton">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>30</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+  background-color: rgb(199, 199, 199);
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 1px solid black;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 12px;
+}
+
+QPushButton[on=&quot;true&quot;] {
+  border: 4px solid yellow;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>BATTERY</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="upButton_6">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>470</y>
+       <width>211</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 10px; /* Adjust as necessary to make it circular */
+        background-color: transparent;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="images.qrc">
+       <normaloff>:/public/aed4.png</normaloff>:/public/aed4.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>200</width>
+       <height>200</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="upButton_7">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>200</y>
+       <width>211</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 10px; /* Adjust as necessary to make it circular */
+        background-color: transparent;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="images.qrc">
+       <normaloff>:/public/aed1.png</normaloff>:/public/aed1.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>200</width>
+       <height>200</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="upButton_8">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>130</y>
+       <width>211</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 10px; /* Adjust as necessary to make it circular */
+        background-color: transparent;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="images.qrc">
+       <normaloff>:/public/aed2.png</normaloff>:/public/aed2.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>200</width>
+       <height>200</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="upButton_9">
+     <property name="geometry">
+      <rect>
+       <x>740</x>
+       <y>470</y>
+       <width>211</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 10px; /* Adjust as necessary to make it circular */
+        background-color: transparent;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="images.qrc">
+       <normaloff>:/public/aed3.png</normaloff>:/public/aed3.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>200</width>
+       <height>200</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="step1Light">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>320</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 15px;
+    border: 1px solid #000;
+    background-color: white;
+    color: black;
+}
+
+QPushButton[status=&quot;yellow&quot;] {
+    background-color: yellow;
+}
+
+QPushButton[status=&quot;red&quot;] {
+    background-color: red;
+}
+
+QPushButton[status=&quot;white&quot;] {
+    background-color: white;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>42</width>
+       <height>42</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="step5Light">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>490</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 15px;
+    border: 1px solid #000;
+    background-color: white;
+    color: black;
+}
+
+QPushButton[status=&quot;yellow&quot;] {
+    background-color: yellow;
+}
+
+QPushButton[status=&quot;red&quot;] {
+    background-color: red;
+}
+
+QPushButton[status=&quot;white&quot;] {
+    background-color: white;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>5</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>42</width>
+       <height>42</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="step2Light">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>270</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 15px;
+    border: 1px solid #000;
+    background-color: white;
+    color: black;
+}
+
+QPushButton[status=&quot;yellow&quot;] {
+    background-color: yellow;
+}
+
+QPushButton[status=&quot;red&quot;] {
+    background-color: red;
+}
+
+QPushButton[status=&quot;white&quot;] {
+    background-color: white;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>2</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>42</width>
+       <height>42</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="step4Light">
+     <property name="geometry">
+      <rect>
+       <x>730</x>
+       <y>520</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 15px;
+    border: 1px solid #000;
+    background-color: white;
+    color: black;
+}
+
+QPushButton[status=&quot;yellow&quot;] {
+    background-color: yellow;
+}
+
+QPushButton[status=&quot;red&quot;] {
+    background-color: red;
+}
+
+QPushButton[status=&quot;white&quot;] {
+    background-color: white;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>4</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>42</width>
+       <height>42</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="consoleView">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>700</y>
+       <width>501</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QGroupBox {
+    background-color: #A9A9A9;
+    color: black;
+}
+
+QGroupBox::title {
+    background-color: #A9A9A9;
+    subcontrol-origin: margin; /* This property is used to align the title within the margin area */
+    subcontrol-position: top center; /* This aligns the title to the top center */
+    padding: 1px 1px; /* Adjust the padding as needed */
+}
+</string>
+     </property>
+     <property name="title">
+      <string>SYSTEM VOICE</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+     <widget class="QPlainTextEdit" name="consoleText">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>501</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPlainTextEdit {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);    
+    font-family: &quot;Consolas&quot;, &quot;Courier New&quot;, monospace; 
+    border: 1px solid #555;  
+    padding: 5px;            
+}
+</string>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="upButton_10">
+     <property name="geometry">
+      <rect>
+       <x>730</x>
+       <y>230</y>
+       <width>211</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 10px; /* Adjust as necessary to make it circular */
+        background-color: transparent;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="images.qrc">
+       <normaloff>:/public/aed5.png</normaloff>:/public/aed5.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>200</width>
+       <height>200</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="step3Light">
+     <property name="geometry">
+      <rect>
+       <x>730</x>
+       <y>360</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 15px;
+    border: 1px solid #000;
+    background-color: white;
+    color: black;
+}
+
+QPushButton[status=&quot;yellow&quot;] {
+    background-color: yellow;
+}
+
+QPushButton[status=&quot;red&quot;] {
+    background-color: red;
+}
+
+QPushButton[status=&quot;white&quot;] {
+    background-color: white;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>3</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>42</width>
+       <height>42</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1029</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
